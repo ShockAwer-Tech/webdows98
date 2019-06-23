@@ -1,0 +1,35 @@
+@import url("global.css");
+
+body.bios {
+    background-color: #000;
+    color: #AAA;
+    font-family: "BIOS", monospace;
+}
+.biosText {
+    background-image: url("../img/energystar.gif");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.bios b {
+    color: #FFF;
+}
+
+
+
+/* scan disk */
+#scandisk {
+    background: #00a;
+    width: 640px;
+    height: 400px;
+    position: fixed;
+    left: calc(50vw - 320px);
+    top: calc(50vh - 200px);
+    padding: 32px;
+}
+
+.cyan {
+    color: #5ff;
+}
+.cyan > * {
+    border-color: #5ff;
+}
