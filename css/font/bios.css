@@ -1,0 +1,12 @@
+/* from int10h.org */
+
+@font-face {
+    font-family: 'BIOS';
+    src: url(bios/ibm_vga8.eot);
+    src: url(bios/ibm_vga8.eot?#iefix) format('embedded-opentype'),
+         url(bios/ibm_vga8.woff2) format('woff2'),
+         url(bios/ibm_vga8.woff) format('woff'),
+         url(bios/ibm_vga8.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
