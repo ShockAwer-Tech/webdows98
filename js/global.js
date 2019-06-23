@@ -21,3 +21,10 @@ function beep(duration, frequency, volume, type) {
     oscillator.start();
     setTimeout(function(){oscillator.stop()}, (duration ? duration : 500));
 };
+
+function fixaudio() {
+    audioCtx.resume()
+}
+
+window.addEventListener("click", fixaudio)
+window.addEventListener("keydown", fixaudio)

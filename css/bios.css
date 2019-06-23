@@ -9,12 +9,17 @@ body.bios {
 .biosText {
     background-image: url("../img/energystar.gif");
     background-repeat: no-repeat;
-    background-position: top right;
+    background-position: right 16;
+    margin-top: -16px;
 }
 .bios b {
     color: #FFF;
 }
 
+#award {
+    position:fixed;
+    top: 0px;
+}
 
 
 /* scan disk */
@@ -28,12 +33,6 @@ body.bios {
     padding: 32px;
 }
 
-.cyan {
-    color: #5ff;
-}
-.cyan > * {
-    border-color: #5ff;
-}
 
 #scandisk > .alignbottom {
     bottom: calc(50vh - 232px);

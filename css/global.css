@@ -13,3 +13,14 @@ body {
     position: fixed;
     bottom: 0%;
 }
+
+.cyan {
+    color: #5ff;
+}
+.cyan > * {
+    border-color: #5ff;
+}
+
+.yellow {
+    color: #ff5 !important;
+}

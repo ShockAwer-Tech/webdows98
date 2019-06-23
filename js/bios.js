@@ -5,28 +5,31 @@ function write(content) {
     bios.innerHTML += content + "<br>"
 }
 
-var lines = `WebBios BIOS v1.00
-Copyright (C) 2019, theLMGN Technologies, Inc.
+var lines = `<img src="img/award.svg" height="32px" width="20px" id="award"/>
+<img src="img/award.svg" height="0px" width="25px"/>Award Modular BIOS v5PC, An Energy Star Ally
+<img src="img/award.svg" height="0px" width="25px"/>Copyright (C) 1984-98, Award Software Inc.
 
 GenuineIntel-Pentium(r) II Processor 266 MHz
 Memory Testing  : 65536 OK
 
-WebBIOS Plug and Play BIOS Extension  v1.0A
-Copyright (C) 2019, theLMGN Technologies, Inc.`
+Award Plug and Play BIOS Extension  v1.0A
+Copyright (C) 1998, Award Softwarer, Inc.`
 
 function updateScandisk(pcnt) {
     var noPos = "░"
     var yesChar = "█"
     var bar = ""
     pcnt = pcnt / 100
+    var len = 65
     if (pcnt < 10) {
-        bar = yesChar.repeat(Math.ceil(pcnt * 68)) + noPos.repeat(68 - Math.floor(pcnt * 68))
-    } else {
-        bar = yesChar.repeat(Math.ceil(pcnt * 67)) + noPos.repeat(67 - Math.floor(pcnt * 67))
+       len = 66
+    } else if (pcnt > 99) {
+       len = 64
     }
+    bar = yesChar.repeat(Math.ceil(pcnt * len)) + noPos.repeat(len - Math.ceil(pcnt * len))
 
     scandisk.querySelector(".alignbottom").innerHTML = `<hr>
-    ${Math.floor(pcnt * 100)}% complete ${bar}`
+    ${Math.floor(pcnt * 100)}% complete <b class="yellow">${bar}</b>`
 }
 
 async function go() {
@@ -56,5 +59,6 @@ async function go() {
         await sleep((Math.random() * 60) + 30)
     }
     await sleep(1000)
+    
 }
 go()
