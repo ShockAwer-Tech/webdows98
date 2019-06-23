@@ -4,6 +4,7 @@ body.bios {
     background-color: #000;
     color: #AAA;
     font-family: "BIOS", monospace;
+    font-size: 16px;
 }
 .biosText {
     background-image: url("../img/energystar.gif");
@@ -32,4 +33,9 @@ body.bios {
 }
 .cyan > * {
     border-color: #5ff;
+}
+
+#scandisk > .alignbottom {
+    bottom: calc(50vh - 232px);
+    position: fixed;
 }
