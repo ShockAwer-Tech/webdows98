@@ -1,18 +1,15 @@
 @import url("global.css");
 
-body.bios {
-    background-color: #000;
-    color: #AAA;
-    font-family: "BIOS", monospace;
-    font-size: 16px;
-}
 .biosText {
     background-image: url("../img/energystar.gif");
     background-repeat: no-repeat;
     background-position: right 16;
+    font-family: "BIOS", monospace;
     margin-top: -16px;
+    color: #AAA;
+    font-size: 16px;
 }
-.bios b {
+.biosText b {
     color: #FFF;
 }
 
@@ -31,10 +28,30 @@ body.bios {
     left: calc(50vw - 320px);
     top: calc(50vh - 200px);
     padding: 32px;
+    font-family: "BIOS", monospace;
 }
 
 
 #scandisk > .alignbottom {
     bottom: calc(50vh - 232px);
     position: fixed;
+}
+
+/* boot */
+
+#boot {
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 13px);
+    background-image: url("../img/loading.png");
+    background-size: 100vw 100vh;
+}
+#loadingBar {
+    content: "";
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 13px;
+    background-image: url("../img/loadingbar.png");
+
 }

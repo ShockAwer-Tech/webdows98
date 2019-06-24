@@ -1,5 +1,6 @@
 var bios = document.querySelector(".biosText")
 var scandisk = document.querySelector("#scandisk")
+var boot = document.querySelector("#boot")
 
 function write(content) {
     bios.innerHTML += content + "<br>"
@@ -51,14 +52,16 @@ async function go() {
 
     for (x = 0; x < 61; x++) {
         updateScandisk(x)
-        await sleep((Math.random() * 60) + 30)
+        //await sleep((Math.random() * 60) + 30)
     }
-    await sleep(2500)
+    //await sleep(2500)
     for (x = 60; x < 101; x++) {
         updateScandisk(x)
-        await sleep((Math.random() * 60) + 30)
+        //await sleep((Math.random() * 60) + 30)
     }
     await sleep(1000)
-    
+
+    scandisk.style.display = "none"
+    boot.style.display = "block"
 }
 go()
