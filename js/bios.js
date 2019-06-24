@@ -52,12 +52,12 @@ async function go() {
 
     for (x = 0; x < 61; x++) {
         updateScandisk(x)
-        //await sleep((Math.random() * 60) + 30)
+        await sleep((Math.random() * 60) + 30)
     }
-    //await sleep(2500)
+    await sleep(2500)
     for (x = 60; x < 101; x++) {
         updateScandisk(x)
-        //await sleep((Math.random() * 60) + 30)
+        await sleep((Math.random() * 60) + 30)
     }
     await sleep(1000)
 
